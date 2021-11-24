@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>edu.demidov.netchess</groupId>
+        <artifactId>NetChessParent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>NetChessServer</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>NetChessServer</name>
+    <description>Client-server application for Player vs Player games</description>
+    
+    <properties>
+        <packageName>edu.demidov.netchess.server.controllers</packageName>
+        <mainClass>${packageName}.NetChessServer</mainClass>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
+    <dependencies>
+        <!-- NetChessCommon library for both client and server apps -->
+        <dependency>
+            <groupId>edu.demidov.netchess</groupId>
+            <artifactId>NetChessCommon</artifactId>
+            <version>1.0.0</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!-- Netty is a non-blocking I/O (NIO) client-server framework -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.33.Final</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>edu.demidov.netchess</groupId>
+            <artifactId>NetChessGame</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+</project>
